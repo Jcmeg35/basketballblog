@@ -15,5 +15,17 @@
   </div>
 <% end %>
 
-<div id="signup_button">
- <%= link_to "Sign Up", new_user_path %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :fname %>
+  <%= f.text_field :fname %>
+  <%= f.label :lname %>
+  <%= f.text_field :lname %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation %>
+  <%= password_field_tag :password_confirmation %>
+  <%= f.submit :create %>
+<% end %>

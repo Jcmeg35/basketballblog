@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
   resources :comments
+  
   resources :posts
-  resources :posts
+  
   root 'users#index'
 
   resources :users
+
+  get '/signup' => 'users#new', as: :signup
 
   resources :sessions
 
