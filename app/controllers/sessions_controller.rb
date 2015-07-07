@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def create
     username = params[:username]
-    password = parmas[:password]
+    password = params[:password]
   
     @user = User.where(username: username).first
 
