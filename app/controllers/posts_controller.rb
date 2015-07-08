@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
 =======
   def index
-    @posts = Posts.order(id: :desc)
+    @posts = Post.order(id: :desc)
   end
 
   def new
@@ -44,12 +44,14 @@ class PostsController < ApplicationController
 
   def create
     @user = current_user
-    @post = current_user.create params[:post]
+    @post = current_user.posts.create params[:post]
     flash[:alert] = "You made a new post!"
-    #redirect_to "feed"
+    redirect_to posts_path
+    # redirect to "feed"
     #render: "name of the view" (this would re-render.  Can use a string or symbol)
 >>>>>>> refs/remotes/origin/master
   end
 end
 
 
+  
