@@ -9,5 +9,4 @@ class UsersController < ApplicationController
     flash[:alert] = "Weclome #{@user.username}"
     redirect_to root_path
   end 
-
 end
