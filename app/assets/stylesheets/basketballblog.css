@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.pageheader {
+  text-align: center;
+}
+
+#flashalert {
+  margin: 35px 20px 0 0;
+  padding: 5px 5px;
+  width: 400px;
+  height: 20px;
+  float: right;
+  background-color: yellow;
+  border-radius: 10px;
+  text-align: right;
+}
+
+#pagecontainer {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#logintable {
+  width: 300px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+#signuptable {
+  width: 375px;
+  padding: 15px 5px;
+  margin: 0 auto;
+  border: 2px solid black;
+  text-align: right;
+}
+
+header {
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+nav {
+  text-align: right;
+    margin-right: 20px;
+}
+
+nav li {
+  padding: 0 20px;
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+}

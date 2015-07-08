@@ -1,31 +1,36 @@
-<% if current_user %>
-  <%= link_to "Sign Out", '/logout', method: :delete %>
-<% else %>
-  <%= form_tag '/sessions' do %>
-    <%= text_field_tag :username, nil, placeholder: "Username" %>
-    <%= password_field_tag :password, nil, placeholder: "Password" %>
-    <%= submit_tag "Log In" %>
+<h2 class = "pageheader" > Sign Up Page </h2>
+
+<table id = "signuptable">
+  <%= form_for @user do |f| %>
+  <tr>
+    <td><%= f.label "First Name:" %></td>
+    <td><%= f.text_field :fname %><td>
+  </tr>
+
+  <tr>
+    <td><%= f.label "Last Name:" %></td>
+    <td><%= f.text_field :lname %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.label "Username:" %></td>
+    <td><%= f.text_field :username %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.label "Password:" %></td>
+    <td><%= f.password_field :password %></td>
+  </tr>
+    
+  <tr>
+    <td><%= f.label "Password Confirmation:" %></td>
+    <td><%= password_field_tag :password_confirmation %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.submit :create %></td>
+  </tr>
+
   <% end %>
-<% end %>
 
-
-<% if flash[:alert] %>
-  <div style="background:yellow;">
-    <%= flash[:alert] %>
-  </div>
-<% end %>
-
-
-<%= form_for @user do |f| %>
-  <%= f.label :fname %>
-  <%= f.text_field :fname %>
-  <%= f.label :lname %>
-  <%= f.text_field :lname %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.label :password_confirmation %>
-  <%= password_field_tag :password_confirmation %>
-  <%= f.submit :create %>
-<% end %>
+</table>

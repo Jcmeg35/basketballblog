@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
 
   def destroy
+
+    flash[:alert] = "User: #{current_user.username} successfully logged out"
     session[:user_id] = nil
-    flash[:alert] = "Successfully Logged Out"
     redirect_to root_path
   end
 
@@ -19,9 +20,9 @@ class SessionsController < ApplicationController
     else
       if @user.password == password
         session[:user_id] = @user.id
-        flash[:alert] = "Welcome!"
+        flash[:alert] = "Welcome #{current_user.username}! "
         redirect_to root_path
-        #succes case
+        #success case
       else 
         #wrong password case
         flash[:alert] = "Incorrect credentials"

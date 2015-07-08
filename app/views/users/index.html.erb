@@ -1,19 +1,29 @@
-<% if current_user %>
-  <%= link_to "Sign Out", '/logout', method: :delete %>
-<% else %>
+<h2 class ="pageheader"> Login Page </h2>
+
+<table id = "logintable">
+  
   <%= form_tag '/sessions' do %>
-    <%= text_field_tag :username, nil, placeholder: "Username" %>
-    <%= password_field_tag :password, nil, placeholder: "Password" %>
-    <%= submit_tag "Log In" %>
+
+    <tr>
+      <td> Username: </td>
+      <td><%= text_field_tag :username, nil, placeholder: "Username" %></td>
+    </tr> 
+
+    <tr>
+       <td> Password: </td>
+      <td><%= password_field_tag :password, nil, placeholder: "Password" %></td>
+    </tr>
+
+    <tr>
+      <td> </td>
+      <td> <%= submit_tag "Log In" %></td>
+    </tr>
+
   <% end %>
-<% end %>
+
+</table>
 
 
-<% if flash[:alert] %>
-  <div style="background:yellow;">
-    <%= flash[:alert] %>
-  </div>
-<% end %>
 
-<div id="signup_button">
- <%= link_to "Sign Up", new_user_path %>
+
+

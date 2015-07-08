@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create params[:user]
-    flash[:alert] = "Weclome #{@user.username}"
+    flash[:alert] = "Welcome #{@user.username}"
     redirect_to root_path
   end 
 
