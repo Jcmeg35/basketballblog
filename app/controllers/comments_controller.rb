@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
   def new
     unless current_user
-      flash[:alert] = "Please log into post"
+      flash[:alert] = "Please log in to see posts"
       redirect_to posts_path
     else
       @post = Post.new
@@ -14,11 +14,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @post = current_user.create.posts params[:post]
+    @post = current_user.comments.create params[:comment]
     flash[:alert] = "You made a new post!"
-    #redirect_to "feed"
-    #render: "name of the view" (this would re-render.  Can use a string or symbol)
+    render: "posts/show.html.erb"
   end
 end
 

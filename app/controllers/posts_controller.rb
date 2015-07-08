@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.order(id: :desc)
+    @posts = Post.all.order(id: :desc)
   end
 
   def new
     unless current_user
-      flash[:alert] = "Please log into post"
+      flash[:alert] = "Please log in to post"
       redirect_to posts_path
     else
       @post = Post.new

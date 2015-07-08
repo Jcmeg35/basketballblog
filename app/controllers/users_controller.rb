@@ -4,9 +4,14 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
-    @user = User.create params[:user]
-    flash[:alert] = "Weclome #{@user.username}"
-    redirect_to root_path
-  end 
+def create
+    if params[:user][:password] == params[:password_confirmation]
+      @user = User.create params[:user]
+      flash[:notice] = "Thanks for Signing Up"
+      redirect_to posts_path
+    else
+      flash[:alert] = "Your password did not match confirmation"
+      redirect_to new_user_path
+    end
+  end
 end

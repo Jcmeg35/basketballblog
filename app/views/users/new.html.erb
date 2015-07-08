@@ -1,14 +1,36 @@
+<h2 class = "pageheader" > Sign Up Page </h2>
 
-<%= form_for @user do |f| %>
-  <%= f.label :fname %>
-  <%= f.text_field :fname %>
-  <%= f.label :lname %>
-  <%= f.text_field :lname %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.label :password_confirmation %>
-  <%= password_field_tag :password_confirmation %>
-  <%= f.submit :create %>
-<% end %>
+<table id = "signuptable">
+  <%= form_for @user do |f| %>
+  <tr>
+    <td><%= f.label "First Name:" %></td>
+    <td><%= f.text_field :fname %><td>
+  </tr>
+
+  <tr>
+    <td><%= f.label "Last Name:" %></td>
+    <td><%= f.text_field :lname %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.label "Username:" %></td>
+    <td><%= f.text_field :username %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.label "Password:" %></td>
+    <td><%= f.password_field :password %></td>
+  </tr>
+    
+  <tr>
+    <td><%= f.label "Password Confirmation:" %></td>
+    <td><%= password_field_tag :password_confirmation %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.submit :create %></td>
+  </tr>
+
+  <% end %>
+
+</table>
