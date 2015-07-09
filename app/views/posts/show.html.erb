@@ -9,3 +9,15 @@
   <%= f.submit :submit %>  
 
 <% end %>
+
+
+<% @post.comments.each do |comment| %>
+  <p>
+    <%= comment.entry %>
+  </p>
+
+<p>
+   Posted by <%= User.find_by_id(comment.user_id).username %>
+   at <%= comment.created_at %>
+</p>
+<% end %>

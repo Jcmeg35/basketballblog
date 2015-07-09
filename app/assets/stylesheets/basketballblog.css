@@ -4,6 +4,29 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+nav {
+  text-align: right;
+    margin-right: 20px;
+}
+
+nav li {
+  padding: 0 20px;
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+td {
+  text-align: left
+}
+
 .pageheader {
   text-align: center;
 }
@@ -39,21 +62,9 @@ body {
   text-align: right;
 }
 
-header {
-  border: 5px solid black;
-  border-radius: 10px;
-}
-
-nav {
-  text-align: right;
-    margin-right: 20px;
-}
-
-nav li {
-  padding: 0 20px;
-  display: inline;
-}
-
-nav a {
-  text-decoration: none;
+.feedstable {
+  width: 600px;
+  padding: 15px 5px;
+  margin: 5px auto;
+  border: 2px solid black;
 }

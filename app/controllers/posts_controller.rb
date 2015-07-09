@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
 
   def index
+    @user = User.all
     @posts = Post.all.order(id: :desc)
   end
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.all
+    @post_id = Post.all
   end
 
   def new
@@ -13,6 +16,7 @@ class PostsController < ApplicationController
       flash[:alert] = "Please log in to post"
       redirect_to posts_path
     else
+       flash[:alert] = "#{current_user.username}: is logged in"
       @post = Post.new
     end
   end

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
+  root 'sessions#index'
+
   resources :comments
   
   resources :posts
-  
-  root 'users#index'
 
   resources :users
 
