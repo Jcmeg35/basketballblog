@@ -1,7 +1,11 @@
+<%= @post.body %>
+
+
 <%= form_for Comment.new do |f|%>
   <%= f.label :entry %>
-  <% f.text_area :entry %>
-   <br>
-  <% f.submit_tag :submit %>  
+  <%= f.text_area :entry %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <br>
+  <%= f.submit :submit %>  
 
-  <% end %>
+<% end %>

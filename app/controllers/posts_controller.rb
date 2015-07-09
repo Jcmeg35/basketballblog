@@ -4,6 +4,10 @@ class PostsController < ApplicationController
     @posts = Post.all.order(id: :desc)
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     unless current_user
       flash[:alert] = "Please log in to post"

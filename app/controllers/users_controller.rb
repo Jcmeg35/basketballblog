@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
 def create
     if params[:user][:password] == params[:password_confirmation]
-      @user = User.create params[:user]
+      @user = User.create user_params[:user]
       flash[:notice] = "Thanks for Signing Up"
       redirect_to posts_path
     else

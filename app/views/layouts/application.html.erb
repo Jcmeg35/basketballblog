@@ -27,7 +27,6 @@
         <% if flash[:alert] %>
          <%= flash[:alert] %>
         <% end %>
-
       </div>
 
       <h1> BasketballBlog </h1>
@@ -36,7 +35,7 @@
 
         <ul>
           <li> <%= link_to "Login", root_path %> </li>
-          <li> <% link_to "Feeds", posts_path %> </li>
+          <li> <%= link_to "Feeds", posts_path %> </li>
           <li> <%= link_to "New Post", new_post_path %></li>
           <li> My Profile</li>
           <li> <%= link_to "Sign Up", new_user_path %> </li>
