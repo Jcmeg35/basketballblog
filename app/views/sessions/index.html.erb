@@ -1,24 +1,16 @@
-<h2 class ="pageheader"> Login Page </h2>
-
-<table id = "logintable">
+<div id= "login_box_wrapper">
+  <h2 id="login_header"> BestBasketballBlog </h2>
   
-  <%= form_tag '/sessions' do %>
+  <%= form_tag '/sessions' , :class => 'loginForm' do %>
 
-    <tr>
-      <td> Username: </td>
-      <td><%= text_field_tag :username, nil, placeholder: "Username" %></td>
-    </tr> 
-
-    <tr>
-       <td> Password: </td>
-      <td><%= password_field_tag :password, nil, placeholder: "Password" %></td>
-    </tr>
-
-    <tr>
-      <td> </td>
-      <td> <%= submit_tag "Log In" %></td>
-    </tr>
+    
+      <!-- <h4> Username: </h>  -->
+      <p><%= text_field_tag( :username, nil, placeholder: "Username", class: "username_form") %></p> 
+     <!--  <h4> Password: </h> -->
+     <p><%= password_field_tag( :password, nil, placeholder: "Password", class: "password_form") %></p>
+     <%= submit_tag("Log In", class: "login_button") %>
 
   <% end %>
 
-</table>
+</div>
+

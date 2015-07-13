@@ -1,26 +1,69 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  width: 1200px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('http://photos2.demandstudios.com/DM-Resize/photos.demandstudios.com/getty/article/26/249/200430632-001_XS.jpg?w=1200&h=630&crop_min=1&keep_ratio=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pagecontainer {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  border: 5px solid black;
-  border-radius: 10px;
+  width: 100%;
+  height: 90px;
+}
+
+#site_title {
+  margin-left: 0px;
+  width: 300px;
+  height: 160px;
+  font-size: 18px;
+  display: inline-block;
+  color: #FA8320;
+  padding-top: 0px;
+}
+
+#site_title h1, h4{
+  margin-top: 0px;
+  margin-bottom: 0px; 
+}
+
+#title_description {
+  width: 260px;
+  height: 40px;
+  font-size: 12px;
+  color: dark blue;
 }
 
 nav {
-  text-align: right;
-    margin-right: 20px;
+  display: inline-block;
+  margin: 0 auto;
+  width: 40%;
+  float: right;
+  /*border: 1px yellow solid;*/
 }
 
-nav li {
-  padding: 0 20px;
+#unordered_list_wrapper {
+  display: inline-block;
+  float: right;
+  margin: 25px 0px 0px 0px;
+}
+
+ul.navigation li {
+  padding: 30px 25px 25px 25px;
+  list-style: none;
   display: inline;
 }
 
-nav a {
+ul.navigation a {
+  font-size: 18px;
   text-decoration: none;
+  font-weight: bolder;
+  color: white;
 }
 
 td {
@@ -31,20 +74,67 @@ td {
   text-align: center;
 }
 
+#login_box_wrapper {
+  width: 300px;
+  height: 380px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#login_header {
+  color: #FA8320;
+  margin-left: 15px;
+}
+
+.loginForm p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.username_form {
+  width: 240px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.username_form[placeholder] {
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.password_form{
+  width: 240px;
+  height: 40px;  
+  margin: 0px;
+  padding: 0px;
+}
+
+.password_form[placeholder] {
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login_button {
+  margin-top: 12px;
+  width: 244px;
+  height: 40px; 
+  border: .2px solid black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
 #flashalert {
   margin: 35px 20px 0 0;
   padding: 5px 5px;
-  width: 400px;
+  width: 200px;
   height: 20px;
   float: right;
-  background-color: yellow;
+  color: yellow;
   border-radius: 10px;
   text-align: right;
-}
-
-#pagecontainer {
-  width: 1024px;
-  margin: 0 auto;
 }
 
 #logintable {
@@ -52,14 +142,6 @@ td {
   padding: 15px 20px;
   margin: 0 auto;
   border: 2px solid black;
-}
-
-#signuptable {
-  width: 375px;
-  padding: 15px 5px;
-  margin: 0 auto;
-  border: 2px solid black;
-  text-align: right;
 }
 
 .feedstable {

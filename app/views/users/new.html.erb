@@ -1,36 +1,16 @@
-<h2 class = "pageheader" > Sign Up Page </h2>
 
-<table id = "signuptable">
+
+<div id = "sign_up_form">
+  <h2 class = "pageheader" > Sign Up </h2>
   <%= form_for @user do |f| %>
-  <tr>
-    <td><%= f.label "First Name:" %></td>
-    <td><%= f.text_field :fname %><td>
-  </tr>
-
-  <tr>
-    <td><%= f.label "Last Name:" %></td>
-    <td><%= f.text_field :lname %></td>
-  </tr>
-
-  <tr>
-    <td><%= f.label "Username:" %></td>
-    <td><%= f.text_field :username %></td>
-  </tr>
-
-  <tr>
-    <td><%= f.label "Password:" %></td>
-    <td><%= f.password_field :password %></td>
-  </tr>
-    
-  <tr>
-    <td><%= f.label "Password Confirmation:" %></td>
-    <td><%= password_field_tag :password_confirmation %></td>
-  </tr>
-
-  <tr>
-    <td><%= f.submit :create %></td>
-  </tr>
+  
+  <p><%= f.text_field( :fname, placeholder: "First Name", class: "form_fields_signup") %></p>
+  <p><%= f.text_field( :lname, placeholder: "Last Name", class: "form_fields_signup") %></p>
+  <p><%= f.text_field( :username, placeholder: "Username", class: "form_fields_signup") %></p>
+  <p><%= f.password_field( :password, placeholder: "Password", class: "form_fields_signup") %></p>
+  <p><%= password_field_tag( :password_confirmation, nil, placeholder: "Password Confirmation", :class => "form_fields_signup") %></p>
+  <br>
+    <%= f.submit("Submit", class: "submit_form") %>
 
   <% end %>
-
-</table>
+</div>
