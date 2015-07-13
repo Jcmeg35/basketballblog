@@ -1,23 +1,32 @@
-<%= @post.body %>
+<br><br><br>
+
+<div id= "comment_wrapper">
+ <div id= "post_body_wrapper">
+  <%= @post.body %>
+ </div>
+
+  <div id= "comment_form">
+    <%= form_for Comment.new do |f|%>
+      <%= f.label( :comment, class: "comment_label")%>
+      <%= f.text_area( :entry, size: "96x4", class: "comment_text") %>
+      <%= f.hidden_field :post_id, value: @post.id %>
+      <br>
+      <%= f.submit( :submit, class: "comment_submit") %>  
+
+    <% end %>
+
+  </div>
 
 
-<%= form_for Comment.new do |f|%>
-  <%= f.label :entry %>
-  <%= f.text_area :entry %>
-  <%= f.hidden_field :post_id, value: @post.id %>
-  <br>
-  <%= f.submit :submit %>  
+  <% @post.comments.each do |comment| %>
+    <p>
+      <%= comment.entry %>
+    </p>
 
-<% end %>
-
-
-<% @post.comments.each do |comment| %>
   <p>
-    <%= comment.entry %>
+     Posted by <%= User.find_by_id(comment.user_id).username %>
+     at <%= comment.created_at %>
   </p>
+  <% end %>
 
-<p>
-   Posted by <%= User.find_by_id(comment.user_id).username %>
-   at <%= comment.created_at %>
-</p>
-<% end %>
+</dvi>

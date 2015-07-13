@@ -1,10 +1,15 @@
-
+<div id = "make_post_wrapper">
 <%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %> 
-  <br>
-  <%= f.label :body %>
-  <%= f.text_field :body %> 
-  <br>
-  <%= f.submit :create %>
+<!--    <div id="post_title_wrapper"> -->
+  <%= f.label :title  %>
+  <%= f.text_field( :title, class: "title_post") %> 
+   <!-- </dvi> -->
+  <br> <br>
+<!--   <div id="post_body_wrapper"> -->
+    <%= f.label( :body, class: "post_label") %>
+    <%= f.text_area( :body, size: "78x30", class: "post_text") %> 
+    <br>
+  <%= f.submit("Submit", class: "submit_post") %>
 <% end %>
+<!--   </div> -->
+</div>

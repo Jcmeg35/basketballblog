@@ -3,5 +3,73 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #make_post_wrapper {
-  
+  width: 800px;
+  height : 650px;
+  border: 1px black solid;
+  margin: 0 auto;
+  margin-top: 60px;
+  color: #FA8320;
+  padding: 20px 20px;
+}
+
+#post_title_wrapper {
+  margin-left: 100px;
+  border: 1px blue solid;
+
+}
+
+.title_post {
+  width: 484px;
+  margin-left: 6px;
+}
+
+#post_body_wrapper {
+  width: 400px;
+  border: 1px yellow solid;
+  padding: 0px; 
+}
+
+.post_label {
+  display: inline-block;
+  vertical-align: top; 
+}
+
+.post_text {
+  display: inline-block;
+/*  margin-top: 25px;
+  resize: none;*/
+}
+
+.submit_post {
+  margin-left: 43px;
+  background-color: grey;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: center;
+}
+
+#comment_wrapper {
+  width: 760px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+#post_body_wrapper {
+  margin-left: 86px;
+  width: 610px;
+}
+
+#comment_form {
+  margin: 10px;
+}
+
+.comment_label {
+  margin-top: 10px; 
+  vertical-align: top;
+}
+
+.comment_submit {
+  margin-left: 77px;
+  font-family: 'Open Sans', sans-serif;
+  width: 80px;
+  height: 50px;
 }
