@@ -1,13 +1,10 @@
-<h1> Feeds Page</h1>
+<h2 id="feeds_header"> Feeds Page</h1>
+
+There are <%= Post.count %> posts
 
 <% @posts.each do |post| %>
 
 <table class = "feedstable">
-
-<tr>
-  <td> Blog User: </td>
-  <td> <%= User.find_by_id(post.user_id).username %> </td>
-</tr>
 
 <tr>
   <td> Title: </td>
@@ -17,6 +14,11 @@
 <tr>
   <td> Post entry: </td>
   <td> <%= post.body %> </td>
+</tr>
+
+<tr>
+  <td> User: </td>
+  <td> <%= User.find_by_id(post.user_id).username %> </td>
 </tr>
 
 <tr>

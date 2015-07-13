@@ -1,10 +1,12 @@
-<h2> User Profile </h2>
+div id = "column_container">
+
+<h2 class = "pageheader"> User Profile </h2>
 
 <div id = "profilecol1">
 
-  <h1>Profile: <%= @user.username %> </h1>
+  <h1>Profile: <%= @user.username %> </h1> <hr>
 
-  <table class = "profiletable">
+  <table class = "profiletable"> 
 
     <tr>
       <td> UserID: </td>
@@ -27,23 +29,70 @@
     </tr>
 
     <tr>
-      <td> Email Address: </td>
-      <td> <%= current_user.email %> </td>
+      <td> Password: </td>
+      <td> <%= current_user.password %> </td>
+
+    <tr>
+      <td> Member Since: </td>
+      <td> <%= current_user.created_at %> </td>
     </tr>
 
     <tr>
-      <td> Gender: </td>
-      <td> <%= current_user.gender %> </td>
+      <td> Last Updated: </td>
+      <td> <%= current_user.updated_at %> </td>
     </tr>
 
-    <tr>
-      <td> City: </td>
-      <td> <%= current_user.city %> </td>
-    </tr>
-
-    <tr>
-      <td> Birthday: </td>
-      <td> <%= current_user.birthday %> </td>
-    </tr>
 
   </table> 
+
+  <ul>
+    <li> <%= link_to "Edit Profile", edit_user_path %> </li>
+    <li> <%= link_to "Delete Profile", '/delete_user', method: :delete %> </li>
+  </ul>
+
+</div> <!-- endo of profilecol1 div -->
+
+
+<div id = "profilecol2">
+
+  <h1> User's Posts: </h1> <hr>
+
+  <% if Post.where(user_id: current_user).count > 0 %>
+
+  <h2> User: <%= current_user.username %> Posts </h2>
+
+    <% @posts.each do |post| %>
+
+    <table>
+
+    <tr>
+      <td> User: </td>
+      <td> <%= current_user.username  %> </td>
+    </tr>
+
+    <tr>
+      <td> Title: </td>
+      <td> <%= post.title %> </td>
+    </tr>
+
+    <tr>
+      <td> Post entry: </td>
+      <td> <%= post.body %> </td>
+    </tr>
+
+    <tr>
+      <td> Date created: </td>
+      <td> <%= post.created_at %> </td>
+    </tr>
+
+    </table>
+    <%end %>
+
+  <% else %>
+
+    <p> No posts has been made </p>
+
+  <% end %>
+
+  </div> <!-- end of profilecol1 div -->
+</div> <!-- end of column_container -->

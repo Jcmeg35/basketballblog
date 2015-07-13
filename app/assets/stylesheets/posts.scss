@@ -1,6 +1,10 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#feeds_header {
+  text-align: center;
+  color: #FA8320;
+}
 
 #make_post_wrapper {
   width: 800px;
@@ -9,6 +13,11 @@
   margin-top: 60px;
   color: #FA8320;
   padding: 20px 20px;
+}
+
+#post_header {
+  color: #FA8320;
+  margin-left: 210px;
 }
 
 #post_title_wrapper {
@@ -32,8 +41,6 @@
 
 .post_text {
   display: inline-block;
-/*  margin-top: 25px;
-  resize: none;*/
 }
 
 .submit_post {
@@ -41,6 +48,11 @@
   background-color: grey;
   font-family: 'Open Sans', sans-serif;
   vertical-align: center;
+}
+
+#comments_header {
+  text-align: center;
+   color: #FA8320;
 }
 
 #comment_wrapper {
@@ -68,4 +80,16 @@
   font-family: 'Open Sans', sans-serif;
   width: 80px;
   height: 50px;
+}
+
+#previous_comments_wrapper {
+  width: 620px;
+  margin-left: 86px;
+  line-height: 10px;
+  color: white;
+  font-weight: lighter;
+}
+
+#commentsheader {
+  color: #FA8320;
 }

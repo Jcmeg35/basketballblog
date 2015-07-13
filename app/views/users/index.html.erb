@@ -1,8 +1,13 @@
-<h1> Blog Users</h1>
+<h1 class ="pageheader"> All Users</h1>
+
+<% @users.each do |user| %>
 
 <table class = "tableformat">
 
-  <% @users.each do |user| %>
+  <tr>
+    <td> User ID: </td>
+    <td><%= user.id %></td>
+  </tr>
 
   <tr>
     <td> First Name: </td>
@@ -24,7 +29,16 @@
     <td><%= user.password %></td>
   </tr>
 
-  <% end %>
+  <tr>
+    <td> Member since: </td>
+    <td><%= user.created_at %></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td> User has made <%= Post.where(user_id: user.id).count %> posts</td>
+  </tr>
 
 </table>
 
+<% end %>

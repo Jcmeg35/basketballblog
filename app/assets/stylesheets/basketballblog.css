@@ -1,15 +1,18 @@
 body {
   width: 1200px;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  background-image: url('http://photos2.demandstudios.com/DM-Resize/photos.demandstudios.com/getty/article/26/249/200430632-001_XS.jpg?w=1200&h=630&crop_min=1&keep_ratio=1');
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-family: sans-serif;
+  background-color: black;
+  color: #dddddd;
 }
 
 #pagecontainer {
+  background-image: url('/images/basketball_720_3.png');
   width: 1200px;
+  padding: 10px 10px;
   margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 1400px;
 }
 
 header {
@@ -17,14 +20,17 @@ header {
   height: 90px;
 }
 
+a:hover {
+  color: #FA8320;
+}
+
 #site_title {
-  margin-left: 0px;
-  width: 300px;
-  height: 160px;
+  width: 400px;
+  height: 80px;
+  float: left;
   font-size: 18px;
   display: inline-block;
   color: #FA8320;
-  padding-top: 0px;
 }
 
 #site_title h1, h4{
@@ -35,34 +41,28 @@ header {
 #title_description {
   width: 260px;
   height: 40px;
-  font-size: 12px;
-  color: dark blue;
+  color: white;
 }
 
 nav {
-  display: inline-block;
-  margin: 0 auto;
-  width: 40%;
+  padding: 0;
+  margin-right: 125px;
   float: right;
-  /*border: 1px yellow solid;*/
 }
 
 #unordered_list_wrapper {
-  display: inline-block;
-  float: right;
-  margin: 25px 0px 0px 0px;
+  margin-left: 10px;
 }
 
 ul.navigation li {
-  padding: 30px 25px 25px 25px;
+  padding: 0 20px;
   list-style: none;
   display: inline;
 }
-
+b
 ul.navigation a {
   font-size: 18px;
   text-decoration: none;
-  font-weight: bolder;
   color: white;
 }
 
@@ -83,7 +83,7 @@ td {
 
 #login_header {
   color: #FA8320;
-  margin-left: 15px;
+  margin-left: 80px;
 }
 
 .loginForm p{
@@ -127,14 +127,9 @@ td {
 }
 
 #flashalert {
-  margin: 35px 20px 0 0;
-  padding: 5px 5px;
-  width: 200px;
-  height: 20px;
-  float: left;
-  color: yellow;
+  margin-right: 148px;
   border-radius: 10px;
-  text-align: right;
+  color: red;
 }
 
 #logintable {
@@ -149,4 +144,37 @@ td {
   padding: 15px 5px;
   margin: 5px auto;
   border: 2px solid black;
+}
+
+.tableformat {
+  width: 450px;
+  padding: 15px;
+  margin: 0 auto 20px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#column_container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#profilecol1 {
+  width: 300px;
+  padding: 10px 20px;
+  margin: 0 10px 20px 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  float:left;
+}
+
+footer {
+  width: 600px;
+  height: 30px;
+  padding-top: 8px;
+  margin: 10px auto 50px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  clear: both;
+  text-align: center;
 }

@@ -1,5 +1,5 @@
 <br><br><br>
-
+<h2 id="comments_header"> Comments Page </h1>
 <div id= "comment_wrapper">
  <div id= "post_body_wrapper">
   <%= @post.body %>
@@ -17,16 +17,18 @@
 
   </div>
 
+  <div id="previous_comments_wrapper">
+    <h3 id="commentsheader"> Comments: </h3>
+    <% @post.comments.each do |comment| %>
+      <p>
+        <%= comment.entry %>
+      </p>
 
-  <% @post.comments.each do |comment| %>
     <p>
-      <%= comment.entry %>
+       Posted by <%= User.find_by_id(comment.user_id).username %>
+       at <%= comment.created_at %>
     </p>
 
-  <p>
-     Posted by <%= User.find_by_id(comment.user_id).username %>
-     at <%= comment.created_at %>
-  </p>
   <% end %>
-
+  </div>
 </dvi>

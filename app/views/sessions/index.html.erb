@@ -1,12 +1,11 @@
 <div id= "login_box_wrapper">
-  <h2 id="login_header"> BestBasketballBlog </h2>
+  <h2 id="login_header"> Login </h2>
   
   <%= form_tag '/sessions' , :class => 'loginForm' do %>
 
     
-      <!-- <h4> Username: </h>  -->
       <p><%= text_field_tag( :username, nil, placeholder: "Username", class: "username_form") %></p> 
-     <!--  <h4> Password: </h> -->
+    
      <p><%= password_field_tag( :password, nil, placeholder: "Password", class: "password_form") %></p>
      <%= submit_tag("Log In", class: "login_button") %>
 
