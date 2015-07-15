@@ -41,6 +41,19 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.passconfirm_form {
+  width: 240px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.passconfirm_form[placeholder] {
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .submit_form {
   margin-top: 8px;
   width: 244px;
